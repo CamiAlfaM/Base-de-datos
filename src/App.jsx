@@ -1,16 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BaseColaboradores } from './database/BaseColaboradores';
+import Listado from './Componentes/Listado';
+import Formulario from './Componentes/Formulario';
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      
+      <Listado colaboradores= {BaseColaboradores}/> 
+      <Formulario />
     </>
   )
 }
 
-export default App
+export default App;
