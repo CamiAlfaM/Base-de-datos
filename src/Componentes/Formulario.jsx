@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-const Formulario = () => {
+const Formulario = ({onSubmit, setAlert}) => {
   const [colaborador, setColaborador] = useState({
     nombre: "",
     correo: "",
@@ -18,14 +18,34 @@ const handleChange = (e) =>{
 };
 
 const handleSubmit= (e) =>{
-    if( colaborador.nombre === ""||
+  e.preventDefault();
+    if( 
+    colaborador.nombre === ""||
     colaborador.correo === ""||
     colaborador.edad === "" ||
     colaborador.cargo === "" ||
-    colaborador.telefono ===""){
-        
+    colaborador.telefono ===""
+    ){
+      
+      setAlert({
+        msg: "Completa todos los datos",
+        color: "danger",
+    });
+    return;
     }
-    
+    setAlert ({
+      msg: "Colaborador agregado exitosamente",
+      color: "success",
+  });
+
+onSubmit(colaborador);
+setColaborador({
+  nombre:"",
+  correo:"",
+  edad:"",
+  cargo:"",
+  telefono:"",
+});  
 };
 
   return (
