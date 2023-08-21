@@ -1,6 +1,6 @@
 const Buscador = ({onChange, search}) => {
     return (
-        <form className="d-flex" role="search">
+        <form className="buscar" role="search">
         <input className="form-control my-3" 
         type="search" 
         placeholder="Buscar un Colaborador" 

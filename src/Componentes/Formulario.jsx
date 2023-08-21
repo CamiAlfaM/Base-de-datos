@@ -49,7 +49,7 @@ setColaborador({
 };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form className="registro" onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Control
          type="text" 

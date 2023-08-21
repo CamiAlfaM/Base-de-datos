@@ -4,7 +4,28 @@
   padding: 2rem;
   text-align: center;
 }
-form{
-  
+
+.buscar{
+  width: 30vw;
+}
+
+.registro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  background-color:blueviolet;
+  width: 30vw;
+  height: 70vh;
+  border-radius: 5%;
+}
+
+h1{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h3{
+  font-family:'Times New Roman', Times, serif;
 }
 
